@@ -4,6 +4,7 @@ import { Menu } from "../../components/Menu";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { Logo } from "../../components/Logo";
+import { MobileMenu } from "../../components/MobileMenu";
 const items = [
   { title: "Home", href: "https://google.by" },
   { title: "About me", href: "about" },
@@ -17,6 +18,7 @@ export const Header = () => {
         <FlexWrapper align={"center"} justify={"space-between"}>
           <Logo/>
           <Menu items={items} />
+          <MobileMenu items={items}/>
         </FlexWrapper>
       </Container>
     </StyledHeader>

@@ -14,12 +14,34 @@ export const Contacts = () => {
           <StyledSocialBlock>
             <SectionTitle>Connect with me:</SectionTitle>
             <StyledText>Satisfied with me? Please contact me</StyledText>
-            <StyledIconBlock>
-              <Icon iconId={"facebook"} viewBox="0 0 24 24" fill="#7562E0" />
-              <Icon iconId={"github"} viewBox="0 0 24 24" fill="#7562E0" />
-              <Icon iconId={"telegram"} viewBox="0 0 24 24" fill="#7562E0" />
-              <Icon iconId={"linkedin"} viewBox="0 0 24 24" fill="#7562E0" />
-            </StyledIconBlock>
+            <SocialList>
+              <Socialitem>
+                <SocialLink>
+                  <Icon
+                    iconId={"facebook"}
+                    viewBox="0 0 24 24"
+                    fill="#7562E0"
+                  />
+                </SocialLink>
+                <SocialLink>
+                  <Icon iconId={"github"} viewBox="0 0 24 24" fill="#7562E0" />
+                </SocialLink>
+                <SocialLink>
+                  <Icon
+                    iconId={"telegram"}
+                    viewBox="0 0 24 24"
+                    fill="#7562E0"
+                  />
+                </SocialLink>
+                <SocialLink>
+                  <Icon
+                    iconId={"linkedin"}
+                    viewBox="0 0 24 24"
+                    fill="#7562E0"
+                  />
+                </SocialLink>
+              </Socialitem>
+            </SocialList>
           </StyledSocialBlock>
 
           <StyledMailBlock>
@@ -27,9 +49,8 @@ export const Contacts = () => {
             <StyledInput placeholder={"Name:"} />
             <StyledInput placeholder={"Email:"} />
             <StyledInput placeholder={"Message:"} as={"textarea"} />
-            <ButtonWrapper>
-              <Button title="Send" type="submit" variant="primary" />
-            </ButtonWrapper>
+
+            <Button title="Send" type="submit" variant="primary" />
           </StyledMailBlock>
         </FlexWrapper>
       </Container>
@@ -37,14 +58,11 @@ export const Contacts = () => {
   );
 };
 
-const StyledContacts = styled.section`
-  padding: 100px 0;
-`;
+const StyledContacts = styled.section``;
 
 const StyledSocialBlock = styled.div`
   max-width: 400px;
   width: 100%;
-
   display: flex;
   flex-direction: column;
 `;
@@ -54,9 +72,12 @@ const StyledMailBlock = styled.form`
   gap: 15px;
   max-width: 500px;
   width: 100%;
+  textarea {
+    resize: none;
+    height: 150px;
+  }
 `;
 const TitleForm = styled.h3`
-  color: #ffffff;
   font-size: 24px;
   font-weight: 500;
 `;
@@ -67,7 +88,7 @@ const StyledInput = styled.input`
   border: 1px solid transparent;
   border-radius: 8px;
   padding: 15px;
-  color: #ffffff;
+
   font-family: inherit;
   font-size: 16px;
 
@@ -79,22 +100,16 @@ const StyledInput = styled.input`
     outline: none;
     border: 1px solid #7572e1;
   }
-
-  &[as="textarea"] {
-    resize: none;
-    height: 150px;
-  }
 `;
 
 const StyledText = styled.p`
-  color: #ffffff;
   font-size: 18px;
   margin: 25px 0 35px;
 `;
 
-const StyledIconBlock = styled.div`
+const SocialList = styled.ul`
   display: flex;
-  gap: 20px;
+  margin: 15px 0;
 
   svg {
     cursor: pointer;
@@ -105,13 +120,11 @@ const StyledIconBlock = styled.div`
 
     &:hover {
       transform: translateY(-3px);
-      color: #ffffff;
     }
   }
 `;
-
-const ButtonWrapper = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 10px;
+const Socialitem = styled.li`
+`;
+const SocialLink = styled.a`
+margin-right: 15px;
 `;

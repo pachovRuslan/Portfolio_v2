@@ -4,5 +4,10 @@ export const theme ={
         secondaryBg:"#181824",
         accent:"#7562E0",
         font: "white"
-    }
+    },
+    media: {
+        tablet: "screen and (max-width: 768px)",
+        mobile: "screen and (max-width: 576px)",
+
+}
 }

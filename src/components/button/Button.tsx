@@ -21,6 +21,7 @@ const StyledBtn = styled.button<{
   variant: "primary" | "outline";
   buttonType?: string;
 }>`
+max-width: 175px;
   padding: 10px 25px;
   border-radius: 5px;
   font-size: 14px;

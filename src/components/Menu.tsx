@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { theme } from "../styles/Theme";
 type MenuPropsType = {
   title: string;
   href: string;
@@ -20,10 +21,17 @@ export const Menu = (props: { items: Array<MenuPropsType> }) => {
     </StyledMenu>
   );
 };
-const StyledMenu = styled.nav``;
+
+const StyledMenu = styled.nav`
+@media ${theme.media.tablet}{
+  display:none;
+}`;
 const StyledMenuItem = styled.ul`
   display: flex;
   gap: 20px;
+  li:first-child a {
+    color: #7572e1;
+  }
 `;
 const StyledMenuLink = styled.li`
   a {
@@ -32,7 +40,5 @@ const StyledMenuLink = styled.li`
   a:hover {
     color: #7572e1;
   }
-  first-child a {
-    color: #7572e1;
-  }
+  
 `;
