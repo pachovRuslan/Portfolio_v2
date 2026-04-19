@@ -6,20 +6,26 @@ type SkillPropsType = {
   title: string;
   text: string;
 };
-export const Skill = (props: SkillPropsType) => {
+export const Skill = (props: { skillItems: Array<SkillPropsType> }) => {
   return (
-    <StyledSkill>
-      <Icon
-        iconId={props.iconId}
-        width={"60px"}
-        height={"60px"}
-        viewBox={"0 0 30 30"}
-        fill={"white"}
-      />
+    <>
+      {props.skillItems.map((item, index) => {
+        return (
+          <StyledSkill key={index}>
+            <Icon
+              iconId={item.iconId}
+              width={"60px"}
+              height={"60px"}
+              viewBox={"0 0 30 30"}
+              fill={"white"}
+            />
 
-      <SkillTitle>{props.title}</SkillTitle>
-      <SkillText>{props.text}</SkillText>
-    </StyledSkill>
+            <SkillTitle>{item.title}</SkillTitle>
+            <SkillText>{item.text}</SkillText>
+          </StyledSkill>
+        );
+      })}
+    </>
   );
 };
 const StyledSkill = styled.div`
@@ -27,8 +33,7 @@ const StyledSkill = styled.div`
   min-height: 300px;
   display: flex;
   flex-direction: column;
-
-  padding: 45px 30px;
+  padding: 75px 20px;
   border: 2px solid #7572e1;
   border-radius: 15px;
   background-color: #1a1a29;
@@ -42,8 +47,6 @@ const StyledSkill = styled.div`
     }
   }
 `;
-
-
 
 const SkillTitle = styled.h3`
   margin-bottom: 15px;

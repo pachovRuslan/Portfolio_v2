@@ -9,7 +9,7 @@ export const Main = () => {
   return (
     <StyledMain>
       <Container>
-        <FlexWrapper align={"center"} justify={"center"} wrap={"wrap"} gap={"120px"}>
+        <FlexWrapper align={"center"} justify={"space-between"} wrap={"wrap"}>
           <TextBlock>
             <Greeting>Hello, i’m</Greeting>
             <Name>Ruslan Pachkov</Name>
@@ -40,7 +40,7 @@ const StyledMain = styled.section`
 const TextBlock = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px; 
+  gap: 10px;
   text-align: left;
   max-width: 500px;
   width: 100%;
@@ -54,12 +54,12 @@ const Greeting = styled.span`
 const Name = styled.h2`
   font-size: 52px;
   font-weight: 600;
-  margin: 10px 0; 
+  margin: 10px 0;
 `;
 
 const MainText = styled.p`
   font-size: 18px;
-  line-height: 1.5; 
+  line-height: 1.5;
 `;
 
 const PhotoWrapper = styled.div`
@@ -69,17 +69,15 @@ const PhotoWrapper = styled.div`
 
   &::before {
     content: "";
-    width: 444px; 
+    width: 444px;
     height: 444px;
     background-color: #7572e1;
     border-radius: 50%;
-    
     position: absolute;
-    top: 75%; 
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
-  
   }
 `;
 
@@ -91,7 +89,7 @@ const Photo = styled.img`
 `;
 
 const ButtonWrapper = styled.div`
-  margin-top: 30px; 
+  margin-top: 30px;
   display: flex;
   gap: 20px;
 `;

@@ -30,5 +30,6 @@ button{
 }
 section{
     background-color: #1a1a29;
+    padding: 100px 0;
 }
 `

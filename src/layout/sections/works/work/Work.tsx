@@ -3,28 +3,31 @@ import styled from "styled-components";
 import { Button } from "../../../../components/button/Button";
 import { FlexWrapper } from "../../../../components/FlexWrapper"; // Импортируем твой флекс-враппер
 
-type WorkPropsType = {
+type WorksItemsPropsType = {
   title: string;
   text: string;
-  scr: string;
+  img: string;
   linkDemo: string;
   linkRepo: string;
 };
 
-export const Work = (props: WorkPropsType) => {
+export const Work = (props:{workItems: Array<WorksItemsPropsType>}) => {
   return (
-    <StyledWork>
-      <Image src={props.scr} />
-      {/* Оборачиваем текстовый контент, если нужно дополнительное выравнивание */}
-      <Title>{props.title}</Title>
-      <Text>{props.text}</Text>
-      
-      {/* Ключевой момент: ставим кнопки в ряд с помощью FlexWrapper */}
-      <FlexWrapper gap={"20px"}>
-        <Button title="View Live" link={props.linkDemo} variant={"primary"} />
-        <Button title="Github Repo" link={props.linkRepo} variant={"outline"} />
-      </FlexWrapper>
-    </StyledWork>
+<>
+      {props.workItems.map((item, index) => {
+        return (
+          <StyledWork key={index}>
+            <Image src={item.img} alt={item.title} />
+            <Title>{item.title}</Title>
+            <Text>{item.text}</Text>
+            <FlexWrapper gap={"20px"}>
+              <Button title="View Live" link={item.linkDemo} variant={"primary"} />
+              <Button title="Github Repo" link={item.linkRepo} variant={"outline"} />
+            </FlexWrapper>
+          </StyledWork>
+        );
+      })}
+    </>
   );
 };
 

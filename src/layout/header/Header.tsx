@@ -24,5 +24,12 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-background-color: #760000;
+  background-color: #181824;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;   
+  right: 0;
+  width: 100%;
+  z-index: 2;
 `;
