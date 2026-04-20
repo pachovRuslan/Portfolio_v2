@@ -23,12 +23,19 @@ export const Menu = (props: { items: Array<MenuPropsType> }) => {
 };
 
 const StyledMenu = styled.nav`
-@media ${theme.media.tablet}{
-  display:none;
-}`;
+  padding-right: 40px;
+  @media ${theme.media.tablet} {
+    display: none;
+  }
+`;
 const StyledMenuItem = styled.ul`
   display: flex;
-  gap: 20px;
+  gap: 52px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+
   li:first-child a {
     color: #7572e1;
   }
@@ -40,5 +47,4 @@ const StyledMenuLink = styled.li`
   a:hover {
     color: #7572e1;
   }
-  
 `;

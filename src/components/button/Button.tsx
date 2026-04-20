@@ -21,14 +21,19 @@ const StyledBtn = styled.button<{
   variant: "primary" | "outline";
   buttonType?: string;
 }>`
-max-width: 175px;
-  padding: 10px 25px;
+  min-width: 160px;
+  min-height: 50px;
+  max-width: fit-content;
   border-radius: 5px;
-  font-size: 14px;
-  font-weight: 400;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+
   cursor: pointer;
   transition: 0.3s all ease;
-  border: 1px solid #7572e1;
+  border: 2px solid #7572e1;
   color: white;
 
   ${(props) =>

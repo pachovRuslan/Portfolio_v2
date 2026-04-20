@@ -48,7 +48,7 @@ export const Works = () => {
 };
 
 const StyledWorks = styled.section`
-  padding: 100px 0 50px;
+
 `;
 const StyledText = styled.p`
   font-size: 18px;

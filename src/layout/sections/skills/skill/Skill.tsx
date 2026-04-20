@@ -30,13 +30,12 @@ export const Skill = (props: { skillItems: Array<SkillPropsType> }) => {
 };
 const StyledSkill = styled.div`
   width: 350px;
-  min-height: 300px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   padding: 75px 20px;
-  border: 2px solid #7572e1;
+  border: 4px solid #7572e1;
   border-radius: 15px;
-  background-color: #1a1a29;
   align-items: center;
   text-align: center;
 
@@ -49,7 +48,7 @@ const StyledSkill = styled.div`
 `;
 
 const SkillTitle = styled.h3`
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 1px;

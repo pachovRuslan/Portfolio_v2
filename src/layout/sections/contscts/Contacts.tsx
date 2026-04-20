@@ -5,43 +5,20 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { Button } from "../../../components/button/Button";
 import { Icon } from "../../../components/icon/Icon";
 import { Container } from "../../../components/Container";
+import { SocialList } from "../../../components/SocialList";
+import { theme } from "../../../styles/Theme";
 
 export const Contacts = () => {
   return (
     <StyledContacts>
       <Container>
-        <FlexWrapper justify={"space-between"} align-items={"flex-start"}>
+        <FlexWrapper justify={"space-between"} align-items={"flex-start"} wrap="wrap">
           <StyledSocialBlock>
             <SectionTitle>Connect with me:</SectionTitle>
-            <StyledText>Satisfied with me? Please contact me</StyledText>
-            <SocialList>
-              <Socialitem>
-                <SocialLink>
-                  <Icon
-                    iconId={"facebook"}
-                    viewBox="0 0 24 24"
-                    fill="#7562E0"
-                  />
-                </SocialLink>
-                <SocialLink>
-                  <Icon iconId={"github"} viewBox="0 0 24 24" fill="#7562E0" />
-                </SocialLink>
-                <SocialLink>
-                  <Icon
-                    iconId={"telegram"}
-                    viewBox="0 0 24 24"
-                    fill="#7562E0"
-                  />
-                </SocialLink>
-                <SocialLink>
-                  <Icon
-                    iconId={"linkedin"}
-                    viewBox="0 0 24 24"
-                    fill="#7562E0"
-                  />
-                </SocialLink>
-              </Socialitem>
-            </SocialList>
+            <SocialListWrapper>
+              <StyledText>Satisfied with me? Please contact me</StyledText>
+              <SocialList />
+            </SocialListWrapper>
           </StyledSocialBlock>
 
           <StyledMailBlock>
@@ -58,13 +35,21 @@ export const Contacts = () => {
   );
 };
 
-const StyledContacts = styled.section``;
+const StyledContacts = styled.section`
+
+`;
 
 const StyledSocialBlock = styled.div`
   max-width: 400px;
   width: 100%;
   display: flex;
   flex-direction: column;
+
+`;
+const SocialListWrapper = styled.div`
+  @media ${theme.media.mobile} {
+    display: none;
+  }
 `;
 const StyledMailBlock = styled.form`
   display: flex;
@@ -75,6 +60,9 @@ const StyledMailBlock = styled.form`
   textarea {
     resize: none;
     height: 150px;
+  }
+    @media ${theme.media.tablet} {
+    justify-content: center;
   }
 `;
 const TitleForm = styled.h3`
@@ -105,26 +93,4 @@ const StyledInput = styled.input`
 const StyledText = styled.p`
   font-size: 18px;
   margin: 25px 0 35px;
-`;
-
-const SocialList = styled.ul`
-  display: flex;
-  margin: 15px 0;
-
-  svg {
-    cursor: pointer;
-    transition: 0.3s;
-
-    width: 30px;
-    height: 30px;
-
-    &:hover {
-      transform: translateY(-3px);
-    }
-  }
-`;
-const Socialitem = styled.li`
-`;
-const SocialLink = styled.a`
-margin-right: 15px;
 `;

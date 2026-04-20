@@ -50,6 +50,4 @@ export const Skills = () => {
   );
 };
 
-const StyledSkills = styled.section`
- 
-`;
+const StyledSkills = styled.section``;

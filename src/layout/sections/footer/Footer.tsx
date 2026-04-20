@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
+import { SocialList } from "../../../components/SocialList";
 
 export const Footer = () => {
   return (
@@ -14,6 +15,10 @@ export const Footer = () => {
             <li>UI Designer</li>
             <li>Data Analyst</li>
           </StyledSkillsList>
+
+          <MobileOnlySocial>
+            <SocialList />
+          </MobileOnlySocial>
           <Copyright>@2026 Ruslan Pachkov</Copyright>
         </FlexWrapper>
       </Container>
@@ -28,19 +33,36 @@ const StyledFooter = styled.footer`
 
 const StyledSkillsList = styled.ul`
   display: flex;
+
   gap: 30px;
   list-style: none;
   padding: 0;
   margin-bottom: 30px;
+  @media (max-width: 567px) {
+    flex-direction: column;
+    align-items: center;
+  }
 
   li {
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 1px;
+    font-weight: 500;
+
+    font-size: 16px;
+
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    opacity: 50%;
   }
 `;
 
 const Copyright = styled.small`
   font-size: 12px;
   font-weight: 400;
+  opacity: 50%;
+`;
+const MobileOnlySocial = styled.div`
+  display: none;
+  @media (max-width: 567px) {
+    display: block;
+  }
 `;

@@ -20,7 +20,7 @@ export const Work = (props: { workItems: Array<WorksItemsPropsType> }) => {
             <Image src={item.img} alt={item.title} />
             <Title>{item.title}</Title>
             <Text>{item.text}</Text>
-            <FlexWrapper gap={"20px"}>
+            <ButtonsWrapper >
               <Button
                 title="View Live"
                 link={item.linkDemo}
@@ -31,7 +31,7 @@ export const Work = (props: { workItems: Array<WorksItemsPropsType> }) => {
                 link={item.linkRepo}
                 variant={"outline"}
               />
-            </FlexWrapper>
+            </ButtonsWrapper>
           </StyledWork>
         );
       })}
@@ -41,12 +41,14 @@ export const Work = (props: { workItems: Array<WorksItemsPropsType> }) => {
 
 const StyledWork = styled.div`
   width: 340px;
-  flex-grow: 1;
+  min-height: 415px;
+  display: flex;
+  flex-direction: column;
+   align-items: center;
   background-color: #31313f;
   border-radius: 10px;
   padding: 15px;
-  display: flex;
-  flex-direction: column;
+
 `;
 
 const Image = styled.img`
@@ -72,3 +74,8 @@ const Text = styled.p`
   margin-bottom: 20px;
   text-align: left;
 `;
+const ButtonsWrapper = styled.div`
+display: flex;
+gap:18px;
+margin-top: auto
+`
