@@ -6,6 +6,8 @@ type FlexWrapperPropsType = {
   align?: string;
   wrap?: string;
   gap?: string;
+  padTop?: string;
+
 };
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
   display: flex;
@@ -14,7 +16,6 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
   align-items: ${(props) => props.align || "stretch"};
   flex-wrap: ${(props) => props.wrap || "nowrap"};
   gap: ${(props) => props.gap || "0px"};
-  @media ${theme.media.mobile} {
-    justify-content: center;
-  }
+  padding-top: ${(props) => props.padTop || "0px"};;
+ 
 `;

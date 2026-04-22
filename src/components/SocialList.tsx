@@ -53,7 +53,7 @@ const SocialItems = styled.ul`
 const Socialitem = styled.li`
 `;
 const SocialLink = styled.a`
-margin-right: 15px;
+margin-right: 18px;
 `;
 
 

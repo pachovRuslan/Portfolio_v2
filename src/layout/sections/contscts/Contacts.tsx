@@ -12,7 +12,7 @@ export const Contacts = () => {
   return (
     <StyledContacts>
       <Container>
-        <FlexWrapper justify={"space-between"} align-items={"flex-start"} wrap="wrap">
+        <StyledFlexWrapper justify={"space-between"} align={"flex-start"} wrap="wrap">
           <StyledSocialBlock>
             <SectionTitle>Connect with me:</SectionTitle>
             <SocialListWrapper>
@@ -29,16 +29,21 @@ export const Contacts = () => {
 
             <Button title="Send" type="submit" variant="primary" />
           </StyledMailBlock>
-        </FlexWrapper>
+        </StyledFlexWrapper>
       </Container>
     </StyledContacts>
   );
 };
 
 const StyledContacts = styled.section`
+padding: 72px 0;
 
 `;
-
+const StyledFlexWrapper = styled(FlexWrapper)`
+  @media (max-width: 1000px) {
+    justify-content: center;
+  }
+`;
 const StyledSocialBlock = styled.div`
   max-width: 400px;
   width: 100%;
@@ -47,6 +52,7 @@ const StyledSocialBlock = styled.div`
 
 `;
 const SocialListWrapper = styled.div`
+margin-left: 13px;
   @media ${theme.media.mobile} {
     display: none;
   }
@@ -57,17 +63,22 @@ const StyledMailBlock = styled.form`
   gap: 15px;
   max-width: 500px;
   width: 100%;
+  margin-right: 56px;
   textarea {
     resize: none;
-    height: 150px;
+    height: 92px;
   }
     @media ${theme.media.tablet} {
     justify-content: center;
+  }
+   @media (max-width: 1000px) {
+   margin: 0;
   }
 `;
 const TitleForm = styled.h3`
   font-size: 24px;
   font-weight: 500;
+  
 `;
 
 const StyledInput = styled.input`
@@ -76,7 +87,7 @@ const StyledInput = styled.input`
   border: 1px solid transparent;
   border-radius: 8px;
   padding: 15px;
-
+margin-top: 10px;
   font-family: inherit;
   font-size: 16px;
 
@@ -92,5 +103,5 @@ const StyledInput = styled.input`
 
 const StyledText = styled.p`
   font-size: 18px;
-  margin: 25px 0 35px;
+  margin: 17px 0px 26px;
 `;

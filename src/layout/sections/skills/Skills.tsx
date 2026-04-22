@@ -42,7 +42,7 @@ export const Skills = () => {
       <Container>
         <SectionTitle>The services i offer:</SectionTitle>
 
-        <FlexWrapper wrap={"wrap"} justify={"center"} gap={"25px"}>
+        <FlexWrapper wrap={"wrap"} justify={"center"} padTop={"30px"} gap={"16px 22px"}>
           <Skill skillItems={skillItems} />
         </FlexWrapper>
       </Container>
@@ -50,4 +50,6 @@ export const Skills = () => {
   );
 };
 
-const StyledSkills = styled.section``;
+const StyledSkills = styled.section`
+padding: 24px 0;
+`;

@@ -1,5 +1,6 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled  from "styled-components";
+import { theme } from "../../styles/Theme";
 type ButtonPropsType = {
   title: string;
   link?: string;
@@ -19,42 +20,25 @@ export const Button = (props: ButtonPropsType) => {
 
 const StyledBtn = styled.button<{
   variant: "primary" | "outline";
-  buttonType?: string;
 }>`
-  min-width: 160px;
+  width: 100%; 
+  max-width: 170px;
   min-height: 50px;
-  max-width: fit-content;
   border-radius: 5px;
-
   font-weight: 600;
   font-size: 16px;
   line-height: 100%;
-  letter-spacing: 0%;
-
+  
   cursor: pointer;
-  transition: 0.3s all ease;
+
   border: 2px solid #7572e1;
-  color: white;
+  color: ${theme.colors.font};
 
-  ${(props) =>
-    props.variant === "primary" &&
-    css`
-      background-color: #7572e1;
+  
+  background-color: ${props => props.variant === "primary" ? "#7572e1" : "transparent"};
 
-      &:hover {
-        background-color: transparent;
-        color: #7572e1;
-      }
-    `}
-
-  ${(props) =>
-    props.variant === "outline" &&
-    css`
-      background-color: transparent;
-
-      &:hover {
-        background-color: #7572e1;
-        color: white;
-      }
-    `}
+  &:hover {
+    background-color: ${props => props.variant === "primary" ? "transparent" : "#7572e1"};
+    color: ${props => props.variant === "primary" ? "#7572e1" : "white"};
+  }
 `;

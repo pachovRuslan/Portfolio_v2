@@ -9,7 +9,12 @@ export const Footer = () => {
   return (
     <StyledFooter>
       <Container>
-        <FlexWrapper direction={"column"} align={"center"}>
+        <FlexWrapper
+          direction={"column"}
+          align={"center"}
+          padTop={"30px"}
+          gap={"10px"}
+        >
           <StyledSkillsList>
             <li>Fullstack Developer</li>
             <li>UI Designer</li>
@@ -28,16 +33,15 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer`
   background-color: ${theme.colors.primaryBg};
-  padding: 40px 0;
+  padding: 35px 0;
 `;
 
 const StyledSkillsList = styled.ul`
   display: flex;
-
-  gap: 30px;
+  gap: 50px;
   list-style: none;
   padding: 0;
-  margin-bottom: 30px;
+
   @media (max-width: 567px) {
     flex-direction: column;
     align-items: center;
@@ -45,19 +49,18 @@ const StyledSkillsList = styled.ul`
 
   li {
     font-weight: 500;
-
     font-size: 16px;
-
     line-height: 100%;
     letter-spacing: 0%;
-
     opacity: 50%;
   }
 `;
 
 const Copyright = styled.small`
-  font-size: 12px;
-  font-weight: 400;
+padding-top: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
   opacity: 50%;
 `;
 const MobileOnlySocial = styled.div`

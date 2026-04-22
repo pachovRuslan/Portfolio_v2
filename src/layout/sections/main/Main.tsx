@@ -12,10 +12,10 @@ export const Main = () => {
     <StyledMain>
       <Container>
         <FlexWrapper
-          align={"center"}
+          align={"start"}
           justify={"center"}
           wrap={"wrap"}
-          gap={"60px"}
+          gap={"75px"}
         >
           <TextBlock>
             <Greeting>Hello, i’m</Greeting>
@@ -40,48 +40,68 @@ export const Main = () => {
 
 const StyledMain = styled.section`
   display: flex;
-  align-items: center;
+  border-bottom: 128px solid #181824;
+  padding: 100px 0px 0px 0px;
   @media ${theme.media.mobile} {
     justify-content: center;
-    padding: 55px 0;
+    padding: 0 0;
   }
 `;
 
 const TextBlock = styled.div`
+  margin-top: 112px;
   display: flex;
   flex-direction: column;
   text-align: left;
   max-width: 500px;
+   @media ${theme.media.mobile} {
+   margin-top: 65px;
+  }
+  
 `;
 
 const Greeting = styled.span`
-  margin: 110px 0 0 0px;
   ${font({ weight: 400, Fmax: 32, Fmin: 24 })}
   @media ${theme.media.mobile} {
-   margin: 9px 0 0 17px;
+    
   }
 `;
 
 const Name = styled.h2`
-  padding: 19px 0 0 14px;
+  margin-top: 20px;
   ${font({ weight: 600, Fmax: 52, Fmin: 38 })}
+    @media ${theme.media.mobile} {
+   margin-top: 15px;
+  }
 `;
 
 const MainText = styled.p`
+  margin-top: 20px;
   font-size: 18px;
   line-height: 1.5;
-  padding: 21px 0 0 15px;
+`;
+const ButtonWrapper = styled.div`
+  margin-top: 30px;
+  display: flex;
+  gap: 35px;
+  @media ${theme.media.mobile} {
+    justify-content: center;
+    gap: 10px;
+    padding: 0px 10px ;
+    margin-top: 25px;
+  }
 `;
 
 const PhotoWrapper = styled.div`
   display: flex;
   justify-content: center;
-  margin: 17px 0;
+  
   width: 100%;
   max-width: 500px;
   height: 444px;
   position: relative;
   left: 20px;
+  margin-top: 17px;
   z-index: 0;
   clip-path: inset(0 -100% 0 -100%);
 
@@ -119,16 +139,5 @@ const Photo = styled.img`
   @media ${theme.media.mobile} {
     width: 310px;
     height: 310px;
-  }
-`;
-
-const ButtonWrapper = styled.div`
-  padding: 30px 0 60px 0px;
-  display: flex;
-  gap: 40px;
-  @media ${theme.media.mobile} {
-    justify-content: center;
-    gap: 10px;
-    padding: 20px 10px 60px 10px;
   }
 `;

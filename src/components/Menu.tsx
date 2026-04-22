@@ -23,7 +23,7 @@ export const Menu = (props: { items: Array<MenuPropsType> }) => {
 };
 
 const StyledMenu = styled.nav`
-  padding-right: 40px;
+  padding-right: 25px;
   @media ${theme.media.tablet} {
     display: none;
   }

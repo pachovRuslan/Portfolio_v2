@@ -44,21 +44,29 @@ const StyledWork = styled.div`
   min-height: 415px;
   display: flex;
   flex-direction: column;
-   align-items: center;
   background-color: #31313f;
   border-radius: 10px;
   padding: 15px;
+  margin: 36px 0px 5px 0;
+`;
 
+const ButtonsWrapper = styled.div`
+display: grid;
+  grid-template-columns: 1fr 1fr; /* Две равные колонки */
+  gap: 10px;                     /* Расстояние между кнопками */
+  width: 100%;
+  margin-top: auto;
 `;
 
 const Image = styled.img`
   border: 2px solid #7572e1;
   border-radius: 10px;
-  width: 100%;
+  width: 100%; 
   height: 175px;
   object-fit: cover;
   margin-bottom: 20px;
 `;
+
 
 const Title = styled.h3`
   color: #7572e1;
@@ -74,8 +82,3 @@ const Text = styled.p`
   margin-bottom: 20px;
   text-align: left;
 `;
-const ButtonsWrapper = styled.div`
-display: flex;
-gap:18px;
-margin-top: auto
-`

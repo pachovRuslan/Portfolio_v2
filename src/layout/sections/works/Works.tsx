@@ -39,7 +39,7 @@ export const Works = () => {
           I have worked on many projects over the course of being a Web
           Developer, here are a few of my live, real-world projects
         </StyledText>
-        <FlexWrapper justify={"center"} wrap={"wrap"} gap={"30px"}>
+        <FlexWrapper justify={"center"} wrap={"wrap"} gap={"20px"}>
           <Work workItems={workItems} />
         </FlexWrapper>
       </Container>
@@ -48,11 +48,11 @@ export const Works = () => {
 };
 
 const StyledWorks = styled.section`
-
+  padding: 55px 0;
 `;
 const StyledText = styled.p`
+  margin: 13px 5px 0px 14px;
   font-size: 18px;
   line-height: 32px;
   letter-spacing: 0%;
-  padding-bottom: 35px;
 `;

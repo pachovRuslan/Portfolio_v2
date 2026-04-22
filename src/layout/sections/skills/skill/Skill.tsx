@@ -1,6 +1,7 @@
 import React from "react";
 import { Icon } from "../../../../components/icon/Icon";
 import styled from "styled-components";
+import { theme } from "../../../../styles/Theme";
 type SkillPropsType = {
   iconId: string;
   title: string;
@@ -12,13 +13,16 @@ export const Skill = (props: { skillItems: Array<SkillPropsType> }) => {
       {props.skillItems.map((item, index) => {
         return (
           <StyledSkill key={index}>
-            <Icon
+            <IconWrapper>
+              <Icon
               iconId={item.iconId}
               width={"60px"}
               height={"60px"}
               viewBox={"0 0 30 30"}
               fill={"white"}
             />
+            </IconWrapper>
+            
 
             <SkillTitle>{item.title}</SkillTitle>
             <SkillText>{item.text}</SkillText>
@@ -29,11 +33,11 @@ export const Skill = (props: { skillItems: Array<SkillPropsType> }) => {
   );
 };
 const StyledSkill = styled.div`
-  width: 350px;
-  height: 350px;
+  width: 341px;
+  height: 341px;
   display: flex;
   flex-direction: column;
-  padding: 75px 20px;
+  
   border: 4px solid #7572e1;
   border-radius: 15px;
   align-items: center;
@@ -45,6 +49,12 @@ const StyledSkill = styled.div`
       color: #7572e1;
     }
   }
+  @media ${theme.media.mobile}{
+    width: 330px;
+  }
+   
+  
+  
 `;
 
 const SkillTitle = styled.h3`
@@ -59,7 +69,13 @@ const SkillText = styled.p`
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
+  padding-top: 10px;
   color: #ffffff;
   max-width: 280px;
   flex-grow: 1;
 `;
+const IconWrapper = styled.div`
+padding-top: 80px;
+  display: flex;
+  justify-content: end;
+`
