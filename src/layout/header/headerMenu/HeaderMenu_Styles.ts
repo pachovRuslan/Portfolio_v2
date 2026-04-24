@@ -1,31 +1,29 @@
-import React from "react";
 import styled, { css } from "styled-components";
-import { theme } from "../styles/Theme";
-type MenuPropsType = {
-  title: string;
-  href: string;
-};
+import { theme } from "../../../styles/Theme";
+import {Link} from 'react-scroll'
 
-export const MobileMenu = (props: { items: Array<MenuPropsType> }) => {
-  return (
-    <StyledMenu>
-      <BurgerButton isOpen={false}>
-        <span></span>
-      </BurgerButton>
-      <MobileMenuPopup isOpen={false}>
-        <StyledMenuItem>
-          {props.items.map((item, index) => {
-            return (
-              <StyledMenuLink key={index}>
-                <a href={`${item.href}`}>{item.title}</a>
-              </StyledMenuLink>
-            );
-          })}
-        </StyledMenuItem>
-      </MobileMenuPopup>
-    </StyledMenu>
-  );
-};
+const DesktopMenu = styled.nav`
+  padding-right: 25px;
+  ul{
+  margin-left: 20px;
+  white-space: nowrap;
+  display: flex;
+  gap: 52px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  }
+
+`
+const MenuItem = styled.li`
+ 
+`;
+const NavLink = styled(Link)`
+ :hover, &.active {
+    color: ${theme.colors.accent};
+  }
+`
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   position: fixed;
   top: 0;
@@ -54,7 +52,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
 `;
 const BurgerButton = styled.button<{ isOpen: boolean }>`
   position: fixed;
-  top:-115px;
+  top: -115px;
   right: -120px;
   width: 200px;
   height: 200px;
@@ -102,23 +100,22 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
         props.isOpen &&
         css<{ isOpen: boolean }>`
           transform: rotate(45deg) translateY(0);
-          width: 30px;
+          width: 23px;
         `}
     }
   }
 `;
-const StyledMenu = styled.nav`
-  display: none;
-  @media ${theme.media.tablet} {
-    display: block;
+
+
+const MobileMenu = styled.nav`
+  ul {
   }
 `;
-const StyledMenuItem = styled.ul``;
-const StyledMenuLink = styled.li`
-  a {
-    color: white;
-  }
-  a:hover {
-    color: #7572e1;
-  }
-`;
+export const S = {
+  MenuItem,
+  NavLink,
+  MobileMenuPopup,
+  MobileMenu,
+  BurgerButton,
+  DesktopMenu
+};

@@ -2,10 +2,10 @@ import React from "react";
 import myLogo from "../assets/images/Logo.svg"
 import styled from "styled-components";
 import { theme } from "../styles/Theme";
+import { animateScroll as scroll} from "react-scroll";
 
-
-export const Logo = () => {
-  return <StyledLogo src={myLogo} alt="Ruslan Pachkov" />
+export const Logo:React.FC = () => {
+  return <StyledLogo src={myLogo} alt="Ruslan Pachkov" onClick={()=>{scroll.scrollToTop()}} />
 };
 
 const StyledLogo = styled.img`

@@ -1,9 +1,9 @@
 import React from "react";
-import styled from "styled-components";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { Skill } from "./skill/Skill";
 import { Container } from "../../../components/Container";
+import { S } from "./Skills_Styled";
 const skillItems = [
   {
     iconId: "js",
@@ -36,9 +36,9 @@ const skillItems = [
     text: "Implementing predictable state management for complex applications, ensuring seamless data flow and easy debugging across the entire stack.",
   },
 ];
-export const Skills = () => {
+export const Skills:React.FC = () => {
   return (
-    <StyledSkills>
+    <S.StyledSkills id={"skills"}>
       <Container>
         <SectionTitle>The services i offer:</SectionTitle>
 
@@ -46,10 +46,8 @@ export const Skills = () => {
           <Skill skillItems={skillItems} />
         </FlexWrapper>
       </Container>
-    </StyledSkills>
+    </S.StyledSkills>
   );
 };
 
-const StyledSkills = styled.section`
-padding: 24px 0;
-`;
+

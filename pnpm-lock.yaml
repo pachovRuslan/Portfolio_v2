@@ -11,6 +11,9 @@ importers:
       '@babel/core':
         specifier: 7.16.0
         version: 7.16.0
+      '@emailjs/browser':
+        specifier: ^4.4.1
+        version: 4.4.1
       '@pmmmwh/react-refresh-webpack-plugin':
         specifier: 0.5.3
         version: 0.5.3(react-refresh@0.11.0)(type-fest@0.21.3)(webpack-dev-server@4.6.0(webpack@5.64.4))(webpack@5.64.4)
@@ -38,6 +41,9 @@ importers:
       '@types/react-dom':
         specifier: 18.0.0
         version: 18.0.0
+      '@types/react-scroll':
+        specifier: ^1.8.10
+        version: 1.8.10
       babel-jest:
         specifier: 27.4.2
         version: 27.4.2(@babel/core@7.16.0)
@@ -140,6 +146,9 @@ importers:
       react-refresh:
         specifier: 0.11.0
         version: 0.11.0
+      react-scroll:
+        specifier: ^1.9.3
+        version: 1.9.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       resolve:
         specifier: 1.20.0
         version: 1.20.0
@@ -930,6 +939,10 @@ packages:
     peerDependencies:
       postcss-selector-parser: ^6.0.10
 
+  '@emailjs/browser@4.4.1':
+    resolution: {integrity: sha512-DGSlP9sPvyFba3to2A50kDtZ+pXVp/0rhmqs2LmbMS3I5J8FSOgLwzY2Xb4qfKlOVHh29EAutLYwe5yuEZmEFg==}
+    engines: {node: '>=14.0.0'}
+
   '@emotion/is-prop-valid@1.4.0':
     resolution: {integrity: sha512-QgD4fyscGcbbKwJmqNvUMSE02OsHUa+lAWKdEUIJKgqe5IwRSKd7+KhibEWdaKwgjLj0DRSHA9biAIqGBk05lw==}
 
@@ -1296,6 +1309,9 @@ packages:
 
   '@types/react-dom@18.0.0':
     resolution: {integrity: sha512-49897Y0UiCGmxZqpC8Blrf6meL8QUla6eb+BBhn69dTXlmuOlzkfr7HHY/O8J25e1lTUMs+YYxSlVDAaGHCOLg==}
+
+  '@types/react-scroll@1.8.10':
+    resolution: {integrity: sha512-RD4Z7grbdNGOKwKnUBKar6zNxqaW3n8m9QSrfvljW+gmkj1GArb8AFBomVr6xMOgHPD3v1uV3BrIf01py57daQ==}
 
   '@types/react@18.0.0':
     resolution: {integrity: sha512-7+K7zEQYu7NzOwQGLR91KwWXXDzmTFODRVizJyIALf6RfLv2GDpqpknX64pvRVILXCpXi7O/pua8NGk44dLvJw==}
@@ -3585,6 +3601,9 @@ packages:
   lodash.sortby@4.7.0:
     resolution: {integrity: sha512-HDWXG8isMntAyRF5vZ7xKuEvOhT4AhlRt/3czTSjvGUxjYCBVRQY48ViDHyfYz9VIoBkW4TMGQNapx+l3RUwdA==}
 
+  lodash.throttle@4.1.1:
+    resolution: {integrity: sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==}
+
   lodash.uniq@4.5.0:
     resolution: {integrity: sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==}
 
@@ -4492,6 +4511,12 @@ packages:
   react-refresh@0.11.0:
     resolution: {integrity: sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==}
     engines: {node: '>=0.10.0'}
+
+  react-scroll@1.9.3:
+    resolution: {integrity: sha512-xv7FXqF3k63aSLNu4/NjFvRNI0ge7DmmmsbeGarP7LZVAlJMSjUuW3dTtLxp1Afijyv0lS2qwC0GiFHvx1KBHQ==}
+    peerDependencies:
+      react: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+      react-dom: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
   react@18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
@@ -6445,6 +6470,8 @@ snapshots:
     dependencies:
       postcss-selector-parser: 6.1.2
 
+  '@emailjs/browser@4.4.1': {}
+
   '@emotion/is-prop-valid@1.4.0':
     dependencies:
       '@emotion/memoize': 0.9.0
@@ -6949,6 +6976,10 @@ snapshots:
   '@types/q@1.5.8': {}
 
   '@types/react-dom@18.0.0':
+    dependencies:
+      '@types/react': 18.0.0
+
+  '@types/react-scroll@1.8.10':
     dependencies:
       '@types/react': 18.0.0
 
@@ -9882,6 +9913,8 @@ snapshots:
 
   lodash.sortby@4.7.0: {}
 
+  lodash.throttle@4.1.1: {}
+
   lodash.uniq@4.5.0: {}
 
   lodash@4.18.1: {}
@@ -10765,6 +10798,13 @@ snapshots:
   react-is@17.0.2: {}
 
   react-refresh@0.11.0: {}
+
+  react-scroll@1.9.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+    dependencies:
+      lodash.throttle: 4.1.1
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
 
   react@18.2.0:
     dependencies:

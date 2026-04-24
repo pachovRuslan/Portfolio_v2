@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Icon } from './icon/Icon';
 
-export const SocialList = () => {
+export const SocialList:React.FC = () => {
     return (
                    <SocialItems>
                      <Socialitem>

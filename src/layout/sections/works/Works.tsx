@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { Work } from "./work/Work";
 import { FlexWrapper } from "../../../components/FlexWrapper";
@@ -7,6 +6,7 @@ import { Container } from "../../../components/Container";
 import curConv from "../../../assets/images/cc.webp";
 import proj6in1 from "../../../assets/images/6in1.webp";
 import weather from "../../../assets/images/weather.webp";
+import { S } from "./Works_Styled";
 const workItems = [
   {
     title: "Currency Converter",
@@ -30,29 +30,21 @@ const workItems = [
     img: weather,
   },
 ];
-export const Works = () => {
+export const Works:React.FC = () => {
   return (
-    <StyledWorks>
+    <S.StyledWorks id={"works"}>
       <Container>
         <SectionTitle>My Projects</SectionTitle>
-        <StyledText>
+        <S.StyledText>
           I have worked on many projects over the course of being a Web
           Developer, here are a few of my live, real-world projects
-        </StyledText>
+        </S.StyledText>
         <FlexWrapper justify={"center"} wrap={"wrap"} gap={"20px"}>
           <Work workItems={workItems} />
         </FlexWrapper>
       </Container>
-    </StyledWorks>
+    </S.StyledWorks>
   );
 };
 
-const StyledWorks = styled.section`
-  padding: 55px 0;
-`;
-const StyledText = styled.p`
-  margin: 13px 5px 0px 14px;
-  font-size: 18px;
-  line-height: 32px;
-  letter-spacing: 0%;
-`;
+

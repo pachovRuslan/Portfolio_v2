@@ -1,39 +1,6 @@
-import React from "react";
 import styled from "styled-components";
-import { FlexWrapper } from "../../../components/FlexWrapper";
-import { SectionTitle } from "../../../components/SectionTitle";
-import { Button } from "../../../components/button/Button";
-import { Icon } from "../../../components/icon/Icon";
-import { Container } from "../../../components/Container";
-import { SocialList } from "../../../components/SocialList";
 import { theme } from "../../../styles/Theme";
-
-export const Contacts = () => {
-  return (
-    <StyledContacts>
-      <Container>
-        <StyledFlexWrapper justify={"space-between"} align={"flex-start"} wrap="wrap">
-          <StyledSocialBlock>
-            <SectionTitle>Connect with me:</SectionTitle>
-            <SocialListWrapper>
-              <StyledText>Satisfied with me? Please contact me</StyledText>
-              <SocialList />
-            </SocialListWrapper>
-          </StyledSocialBlock>
-
-          <StyledMailBlock>
-            <TitleForm>Contact me, let’s make magic together</TitleForm>
-            <StyledInput placeholder={"Name:"} />
-            <StyledInput placeholder={"Email:"} />
-            <StyledInput placeholder={"Message:"} as={"textarea"} />
-
-            <Button title="Send" type="submit" variant="primary" />
-          </StyledMailBlock>
-        </StyledFlexWrapper>
-      </Container>
-    </StyledContacts>
-  );
-};
+import { FlexWrapper } from "../../../components/FlexWrapper";
 
 const StyledContacts = styled.section`
 padding: 72px 0;
@@ -105,3 +72,14 @@ const StyledText = styled.p`
   font-size: 18px;
   margin: 17px 0px 26px;
 `;
+export const S ={
+    StyledContacts,
+    StyledFlexWrapper,
+    StyledSocialBlock,
+    SocialListWrapper,
+    StyledMailBlock,
+    TitleForm,
+    StyledInput,
+    StyledText
+
+}
