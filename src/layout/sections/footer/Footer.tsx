@@ -23,7 +23,7 @@ export const Footer: React.FC = () => {
           <S.MobileOnlySocial>
             <SocialList />
           </S.MobileOnlySocial>
-          <S.Copyright>@2026 Ruslan Pachkov</S.Copyright>
+          <S.Copyright>© 2026 Ruslan Pachkov</S.Copyright>
         </FlexWrapper>
       </Container>
     </S.Footer>

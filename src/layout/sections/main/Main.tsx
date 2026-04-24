@@ -19,12 +19,17 @@ export const Main: React.FC = () => {
             <S.Greeting>Hello, i’m</S.Greeting>
             <S.Name>Ruslan Pachkov</S.Name>
             <S.MainText>
-              Freelance UI designer, Fullstack developer, & Data Miner. I create
-              seamless web experiences for end-users.
+              Frontend Developer with 10+ years in IT. Specializing in React,
+              TypeScript & modern CSS.
             </S.MainText>
             <S.ButtonWrapper>
-              <Button title={"About me"} link={"about_me"} width="160px"/>
-              <Button variant="outline" title={"Projects"} link={"works"} width="160px"/>
+              <Button title={"About me"} link={"about_me"} width="160px" />
+              <Button
+                variant="outline"
+                title={"Projects"}
+                link={"works"}
+                width="160px"
+              />
             </S.ButtonWrapper>
           </S.TextBlock>
           <S.PhotoWrapper>

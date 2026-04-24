@@ -64,9 +64,10 @@ const SkillTitle = styled.h3`
   text-transform: uppercase;
 `;
 
-const IconPlaceholder = styled.div`
-  width: 50px;
-  height: 50px;
+
+const IconWrapper = styled.div`
+ width: 150px;
+  height: 150px;
   margin-bottom: auto;
 `;
 export const S = {
@@ -77,5 +78,5 @@ export const S = {
   ExperienceText,
   SkillCard,
   SkillTitle,
-  IconPlaceholder,
+  IconWrapper
 };
