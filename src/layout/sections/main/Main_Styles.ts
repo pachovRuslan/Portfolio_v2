@@ -5,10 +5,10 @@ import { font } from "../../../styles/Common";
 const Main = styled.section`
   display: flex;
   border-bottom: 128px solid #181824;
-  padding-top: 180px;
+  padding: 180px 0 0;
   @media ${theme.media.mobile} {
     justify-content: center;
-    padding-top: 80px;
+    padding: 80px 0;
   }
 `;
 
