@@ -4,11 +4,11 @@ import { font } from "../../../styles/Common";
 
 const Main = styled.section`
   display: flex;
-  border-bottom: 128px solid #181824;
-  padding: 180px 0 0;
+  border-bottom: 140px solid #181824;
+  padding: 250px 0 0;
   @media ${theme.media.mobile} {
     justify-content: center;
-    padding: 80px 0;
+    padding: 80px 0 0;
   }
 `;
 

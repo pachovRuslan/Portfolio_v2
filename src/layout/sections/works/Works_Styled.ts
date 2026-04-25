@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledWorks = styled.section`
-  padding: 55px 0;
+  padding: 100px 0;
 `;
 const StyledText = styled.p`
   margin: 13px 5px 0px 14px;

@@ -23,11 +23,11 @@ export const Main: React.FC = () => {
               TypeScript & modern CSS.
             </S.MainText>
             <S.ButtonWrapper>
-              <Button title={"About me"} link={"about_me"} width="160px" />
+              <Button title={"About me"} link={"#about_me"} width="160px" />
               <Button
                 variant="outline"
                 title={"Projects"}
-                link={"works"}
+                link={"#works"}
                 width="160px"
               />
             </S.ButtonWrapper>

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { theme } from "../../../styles/Theme";
 
 const StyledSkills = styled.section`
-  padding: 24px 0;
+  padding: 100px 0;
 `;
 const StyledSkill = styled.div`
   width: 341px;

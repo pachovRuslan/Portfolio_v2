@@ -21,6 +21,7 @@ const MenuItem = styled.li`
 `;
 const NavLink = styled(Link)`
  :hover, &.active {
+  transition: .5s ease-in-out;
     color: ${theme.colors.accent};
   }
 `
@@ -41,6 +42,14 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
       align-items: center;
     `}
   ul {
+
+font-weight: 600;
+
+font-size: 24px;
+
+line-height: 100%;
+letter-spacing: 0%;
+
     display: flex;
     flex-direction: column;
     align-items: center;

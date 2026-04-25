@@ -18,7 +18,7 @@ export const Menu: React.FC<MenuPropsType> = ({ onNavLinkClick }) => {
         {items.map((item, index) => {
           return (
             <S.MenuItem key={index}>
-              <S.NavLink to={item.href}  onClick={onNavLinkClick} activeClass="active" spy={true} smooth={true} duration={300} offset={10}>{item.title}</S.NavLink>
+              <S.NavLink to={item.href}  onClick={onNavLinkClick} activeClass="active" spy={true} smooth={true} duration={300} offset={-100}>{item.title}</S.NavLink>
             </S.MenuItem>
           );
         })}

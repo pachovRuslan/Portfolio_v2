@@ -24,8 +24,8 @@ const workItems = [
   },
   {
     title: "Weather App",
-    linkRepo: "#",
-    linkDemo: "#",
+    linkRepo: "https://github.com/pachovRuslan/weather-app",
+    linkDemo: "https://weather-ts-2026.netlify.app/",
     text: "Detailed weather forecasts with location-based services and interactive UI elements.",
     img: weather,
   },
