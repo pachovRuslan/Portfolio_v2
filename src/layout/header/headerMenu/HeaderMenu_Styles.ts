@@ -1,30 +1,28 @@
 import styled, { css } from "styled-components";
 import { theme } from "../../../styles/Theme";
-import {Link} from 'react-scroll'
+import { Link } from "react-scroll";
 
 const DesktopMenu = styled.nav`
   padding-right: 25px;
-  ul{
-  margin-left: 20px;
-  white-space: nowrap;
-  display: flex;
-  gap: 52px;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 100%;
-  letter-spacing: 0%;
+  ul {
+    margin-left: 20px;
+    white-space: nowrap;
+    display: flex;
+    gap: 52px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
   }
-
-`
-const MenuItem = styled.li`
- 
 `;
+const MenuItem = styled.li``;
 const NavLink = styled(Link)`
- :hover, &.active {
-  transition: .5s ease-in-out;
+  :hover,
+  &.active {
+    transition: 0.5s ease-in-out;
     color: ${theme.colors.accent};
   }
-`
+`;
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   position: fixed;
   top: 0;
@@ -42,14 +40,10 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
       align-items: center;
     `}
   ul {
-
-font-weight: 600;
-
-font-size: 24px;
-
-line-height: 100%;
-letter-spacing: 0%;
-
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,8 +73,8 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     left: 40px;
     bottom: 50px;
     ${(props) =>
-      props.isOpen &&
-      css<{ isOpen: boolean }>`
+    props.isOpen &&
+    css<{ isOpen: boolean }>`
         background-color: rgba(255, 255, 255, 0);
       `}
     &::before {
@@ -92,8 +86,8 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       position: absolute;
       transform: translateY(-7px);
       ${(props) =>
-        props.isOpen &&
-        css<{ isOpen: boolean }>`
+    props.isOpen &&
+    css<{ isOpen: boolean }>`
           transform: rotate(-45deg) translateY(0);
         `}
     }
@@ -106,15 +100,14 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       position: absolute;
       transform: translateY(7px);
       ${(props) =>
-        props.isOpen &&
-        css<{ isOpen: boolean }>`
+    props.isOpen &&
+    css<{ isOpen: boolean }>`
           transform: rotate(45deg) translateY(0);
           width: 23px;
         `}
     }
   }
 `;
-
 
 const MobileMenu = styled.nav`
   ul {
@@ -126,5 +119,5 @@ export const S = {
   MobileMenuPopup,
   MobileMenu,
   BurgerButton,
-  DesktopMenu
+  DesktopMenu,
 };
