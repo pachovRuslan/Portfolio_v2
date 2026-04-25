@@ -15,7 +15,7 @@ export const AboutMe: React.FC = () => {
       <Container>
         <SectionTitle>About me:</SectionTitle>
         <S.AboutText>
-          Hi, I'm Ruslan — a frontend developer based in the UK with a
+          Hi, I'm Ruslan — a frontend developer with a
           background in IT support and systems administration spanning over 10
           years. I studied programming in Belarus and have been working hands-on
           with technology ever since. In 2022 I started learning React and
