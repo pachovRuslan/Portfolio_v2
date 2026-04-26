@@ -3,7 +3,7 @@ import { theme } from "../../../styles/Theme";
 
 const Footer = styled.footer`
   background-color: ${theme.colors.primaryBg};
-  padding: 35px 0;
+  padding: 80px 0;
 `;
 
 const SkillsList = styled.ul`

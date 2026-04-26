@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { theme } from "../../../styles/Theme";
 
 const AboutMe = styled.section`
-  padding: 100px 0;
+  padding: 80px 0;
 `;
 
 const AboutText = styled.p`

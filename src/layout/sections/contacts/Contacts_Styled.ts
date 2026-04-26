@@ -3,7 +3,7 @@ import { theme } from "../../../styles/Theme";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 
 const StyledContacts = styled.section`
-padding: 300px 0;
+padding: 200px 0;
 
 `;
 const StyledFlexWrapper = styled(FlexWrapper)`
