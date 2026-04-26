@@ -17,7 +17,7 @@ const DesktopMenu = styled.nav`
 `;
 const MenuItem = styled.li``;
 const NavLink = styled(Link)`
-  :hover,
+  &:hover,
   &.active {
     transition: 0.5s ease-in-out;
     color: ${theme.colors.accent};
