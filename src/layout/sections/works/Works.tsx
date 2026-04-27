@@ -10,15 +10,15 @@ import { S } from "./Works_Styled";
 const workItems = [
   {
     title: "Currency Converter",
-    linkRepo: "#",
-    linkDemo: "#",
+    linkRepo: "https://github.com/pachovRuslan/currency-converter",
+    linkDemo: "https://currency-converter-ts-2026.netlify.app/",
     text: "A landing page for a currency exchange service with real-time rates and dynamic calculations.",
     img: curConv,
   },
   {
     title: "Project 6 in 1",
-    linkRepo: "#",
-    linkDemo: "#",
+    linkRepo: "https://github.com/pachovRuslan/6in1",
+    linkDemo: "https://pachovruslan.github.io/6in1/",
     text: "A versatile application combining six different tools for daily productivity and task management.",
     img: proj6in1,
   },
