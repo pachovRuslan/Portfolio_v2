@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { theme } from "../../../styles/Theme";
 
 const StyledSkills = styled.section`
-height: 100vh;
+ min-height: 100vh;
+ height: 100%;
 `;
 const StyledSkill = styled.div`
   width: 341px;
