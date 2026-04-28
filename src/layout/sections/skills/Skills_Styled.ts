@@ -32,6 +32,7 @@ const SkillTitle = styled.h3`
   font-weight: 700;
   letter-spacing: 1px;
   color: #ffffff;
+  text-transform: uppercase;
 `;
 
 const SkillText = styled.p`
