@@ -1,8 +1,12 @@
 import styled from "styled-components";
+import { theme } from "../../../styles/Theme";
 
 const StyledWorks = styled.section`
  min-height: 100vh;
  height: 100%;
+   @media ${theme.media.mobile} {
+     padding: 0 0;
+   }
 `;
 const StyledText = styled.p`
   margin: 13px 5px 0px 14px;

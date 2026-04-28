@@ -4,6 +4,9 @@ import { theme } from "../../../styles/Theme";
 const StyledSkills = styled.section`
  min-height: 100vh;
  height: 100%;
+   @media ${theme.media.mobile} {
+     padding: 0 0;
+   }
 `;
 const StyledSkill = styled.div`
   width: 341px;
