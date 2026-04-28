@@ -3,9 +3,9 @@ import { theme } from "../../../styles/Theme";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 
 const StyledContacts = styled.section`
-padding : 250px 0;
+padding : 150px 0;
 min-height: 50vh;
-
+ 
 `;
 const StyledFlexWrapper = styled(FlexWrapper)`
   @media (max-width: 1000px) {
